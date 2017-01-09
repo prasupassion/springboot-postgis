@@ -24,6 +24,7 @@ public class LocationsController {
 	
 	@RequestMapping(value = "/changes", method = RequestMethod.POST)//, produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody String getLocationDataByTimeStamp(@RequestBody String timestamp) {
+		System.out.println("Test print");
         return locationsService.getLocationDataByTimeStamp(timestamp,"2016-10-23 12:07:38.07772");
     }
 	
