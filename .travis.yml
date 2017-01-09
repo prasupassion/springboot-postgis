@@ -7,7 +7,7 @@ before_install:
   - "export PATH=$PWD/apache-maven-3.3.9/bin:${PATH}"
   - "hash -r"
   - "chmod +x apache-maven-3.3.9/bin/mvnw"
-  
+
 cache: 
   directories: 
     - $HOME/.m2
@@ -18,4 +18,9 @@ notifications:
   email: 
     - prasupassion@gmail.com
 script: "mvn clean install"
+matrix:
+  include:
+  - jdk: oraclejdk8
+    script: mvn install
+    after_success: mvn deploy -DskipTests=true -Dmaven.javadoc.skip=true
 sudo: false
