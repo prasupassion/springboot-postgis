@@ -6,7 +6,6 @@ before_install:
   - "export M2_HOME=$PWD/apache-maven-3.3.9"
   - "export PATH=$PWD/apache-maven-3.3.9/bin:${PATH}"
   - "hash -r"
-  - "chmod +x apache-maven-3.3.9/bin/mvnw"
 
 cache: 
   directories: 
