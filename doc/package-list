@@ -1,0 +1,7 @@
+com.springjava4dev.postgres
+com.springjava4dev.postgres.controller
+com.springjava4dev.postgres.dao
+com.springjava4dev.postgres.dao.impl
+com.springjava4dev.postgres.model
+com.springjava4dev.postgres.service
+com.springjava4dev.postgres.service.impl
