@@ -1,25 +1,19 @@
----
-language: java
-
-sudo: false
-
-before_install:
-  - wget http://apache.claz.org/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
-  - tar zxvf apache-maven-3.3.9-bin.tar.gz
-  - chmod +x apache-maven-3.3.9/bin/mvn
-  - export M2_HOME=$PWD/apache-maven-3.3.9
-  - export PATH=$PWD/apache-maven-3.3.9/bin:${PATH}
-  - hash -r
-
-cache:
-  directories:
+--- 
+before_install: 
+  - "wget http://apache.claz.org/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz"
+  - "tar zxvf apache-maven-3.3.9-bin.tar.gz"
+  - "chmod +x apache-maven-3.3.9/bin/mvn"
+  - "export M2_HOME=$PWD/apache-maven-3.3.9"
+  - "export PATH=$PWD/apache-maven-3.3.9/bin:${PATH}"
+  - "hash -r"
+cache: 
+  directories: 
     - $HOME/.m2
-
-script: mvn clean install
-
-jdk:
-- oraclejdk8
-
- notifications:
-  email:
-  - prasupassion@gmail.com
+jdk: 
+  - oraclejdk8
+language: java
+notifications: 
+  email: 
+    - prasupassion@gmail.com
+script: "mvn clean install"
+sudo: false
