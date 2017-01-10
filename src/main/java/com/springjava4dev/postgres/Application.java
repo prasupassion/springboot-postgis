@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("com.springjava4dev.postgres.service.impl, com.springjava4dev.postgres.dao.impl,com.springjava4dev.postgres.controller")
 
 public class Application {
-
+    //Test for merging
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 					
